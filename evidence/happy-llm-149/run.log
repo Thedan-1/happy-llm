@@ -1,6 +1,8 @@
 python tests/test_zero_mask_loss.py -v
 4 tests passed
-python -m py_compile docs/chapter5/code/ddp_sft_full.py tests/test_zero_mask_loss.py
+python tests/test_sft_loss_mask.py -v
+2 tests passed
+python -m py_compile docs/chapter5/code/dataset.py tests/test_sft_loss_mask.py
 passed
 python -m compileall -q docs/chapter5/code
 passed
