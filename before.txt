@@ -1,0 +1,70 @@
+C:\Users\Thedan\anaconda3\Lib\site-packages\pandas\core\computation\expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\Thedan\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+test_adamw_partial_groups_match_reference (regression.GradientAccumulationRegression.test_adamw_partial_groups_match_reference) ... 
+  test_adamw_partial_groups_match_reference (regression.GradientAccumulationRegression.test_adamw_partial_groups_match_reference) (script='ddp_pretrain', batches=6) ... FAIL
+  test_adamw_partial_groups_match_reference (regression.GradientAccumulationRegression.test_adamw_partial_groups_match_reference) (script='ddp_sft_full', batches=6) ... FAIL
+test_complete_groups_keep_existing_behavior (regression.GradientAccumulationRegression.test_complete_groups_keep_existing_behavior) ... ok
+test_no_accumulation_keeps_existing_behavior (regression.GradientAccumulationRegression.test_no_accumulation_keeps_existing_behavior) ... ok
+test_partial_group_does_not_leak_into_next_epoch (regression.GradientAccumulationRegression.test_partial_group_does_not_leak_into_next_epoch) ... 
+  test_partial_group_does_not_leak_into_next_epoch (regression.GradientAccumulationRegression.test_partial_group_does_not_leak_into_next_epoch) (script='ddp_pretrain', batches=6) ... FAIL
+  test_partial_group_does_not_leak_into_next_epoch (regression.GradientAccumulationRegression.test_partial_group_does_not_leak_into_next_epoch) (script='ddp_sft_full', batches=6) ... FAIL
+test_short_epoch_updates_once (regression.GradientAccumulationRegression.test_short_epoch_updates_once) ... 
+  test_short_epoch_updates_once (regression.GradientAccumulationRegression.test_short_epoch_updates_once) (script='ddp_pretrain', batches=3) ... FAIL
+  test_short_epoch_updates_once (regression.GradientAccumulationRegression.test_short_epoch_updates_once) (script='ddp_sft_full', batches=3) ... FAIL
+
+======================================================================
+FAIL: test_adamw_partial_groups_match_reference (regression.GradientAccumulationRegression.test_adamw_partial_groups_match_reference) (script='ddp_pretrain', batches=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Thedan\Desktop\����\opensource-work\happy-llm-sft-accumulation\tests\test_gradient_accumulation.py", line 87, in check_training
+    self.assertEqual(len(actual_steps), expected_steps)
+AssertionError: 1 != 2
+
+======================================================================
+FAIL: test_adamw_partial_groups_match_reference (regression.GradientAccumulationRegression.test_adamw_partial_groups_match_reference) (script='ddp_sft_full', batches=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Thedan\Desktop\����\opensource-work\happy-llm-sft-accumulation\tests\test_gradient_accumulation.py", line 87, in check_training
+    self.assertEqual(len(actual_steps), expected_steps)
+AssertionError: 1 != 2
+
+======================================================================
+FAIL: test_partial_group_does_not_leak_into_next_epoch (regression.GradientAccumulationRegression.test_partial_group_does_not_leak_into_next_epoch) (script='ddp_pretrain', batches=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Thedan\Desktop\����\opensource-work\happy-llm-sft-accumulation\tests\test_gradient_accumulation.py", line 87, in check_training
+    self.assertEqual(len(actual_steps), expected_steps)
+AssertionError: 1 != 2
+
+======================================================================
+FAIL: test_partial_group_does_not_leak_into_next_epoch (regression.GradientAccumulationRegression.test_partial_group_does_not_leak_into_next_epoch) (script='ddp_sft_full', batches=6)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Thedan\Desktop\����\opensource-work\happy-llm-sft-accumulation\tests\test_gradient_accumulation.py", line 87, in check_training
+    self.assertEqual(len(actual_steps), expected_steps)
+AssertionError: 1 != 2
+
+======================================================================
+FAIL: test_short_epoch_updates_once (regression.GradientAccumulationRegression.test_short_epoch_updates_once) (script='ddp_pretrain', batches=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Thedan\Desktop\����\opensource-work\happy-llm-sft-accumulation\tests\test_gradient_accumulation.py", line 87, in check_training
+    self.assertEqual(len(actual_steps), expected_steps)
+AssertionError: 0 != 1
+
+======================================================================
+FAIL: test_short_epoch_updates_once (regression.GradientAccumulationRegression.test_short_epoch_updates_once) (script='ddp_sft_full', batches=3)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "C:\Users\Thedan\Desktop\����\opensource-work\happy-llm-sft-accumulation\tests\test_gradient_accumulation.py", line 87, in check_training
+    self.assertEqual(len(actual_steps), expected_steps)
+AssertionError: 0 != 1
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.817s
+
+FAILED (failures=6)
+Baseline revision 1e0b3a1e6f8936b8ba4bbd0673e8e2227d196c96
+Expected failing subtests: 6 Unexpected errors: 0

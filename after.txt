@@ -1,0 +1,14 @@
+C:\Users\Thedan\anaconda3\Lib\site-packages\pandas\core\computation\expressions.py:22: UserWarning: Pandas requires version '2.10.2' or newer of 'numexpr' (version '2.8.7' currently installed).
+  from pandas.core.computation.check import NUMEXPR_INSTALLED
+C:\Users\Thedan\anaconda3\Lib\site-packages\pandas\core\arrays\masked.py:56: UserWarning: Pandas requires version '1.4.2' or newer of 'bottleneck' (version '1.3.7' currently installed).
+  from pandas.core import (
+test_adamw_partial_groups_match_reference (__main__.GradientAccumulationRegression.test_adamw_partial_groups_match_reference) ... ok
+test_complete_groups_keep_existing_behavior (__main__.GradientAccumulationRegression.test_complete_groups_keep_existing_behavior) ... ok
+test_no_accumulation_keeps_existing_behavior (__main__.GradientAccumulationRegression.test_no_accumulation_keeps_existing_behavior) ... ok
+test_partial_group_does_not_leak_into_next_epoch (__main__.GradientAccumulationRegression.test_partial_group_does_not_leak_into_next_epoch) ... ok
+test_short_epoch_updates_once (__main__.GradientAccumulationRegression.test_short_epoch_updates_once) ... ok
+
+----------------------------------------------------------------------
+Ran 5 tests in 0.918s
+
+OK
